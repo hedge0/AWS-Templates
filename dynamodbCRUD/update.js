@@ -26,7 +26,7 @@ exports.handler = async (event) => {
     
         try {
             await DynamoDB.put(params).promise();
-            response = {'message': "Arena Updated"};
+            response = {'message': "Data Updated"};
         } 
         catch(err) {
             response = err;
