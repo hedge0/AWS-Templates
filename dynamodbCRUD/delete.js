@@ -1,6 +1,6 @@
 let AWS = require("aws-sdk");
 AWS.config.update({ region: "us-east-1" });
-let DynamoDB = new AWS.DynamoDB.DocumentClient();
+const DynamoDB = new AWS.DynamoDB.DocumentClient();
 const tableName = 'NEW_TABLE';
 
 exports.handler = async (event) => {
