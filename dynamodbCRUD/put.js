@@ -1,12 +1,12 @@
-var AWS = require("aws-sdk");
+let AWS = require("aws-sdk");
 AWS.config.update({ region: "us-east-1" });
-var DynamoDB = new AWS.DynamoDB.DocumentClient();
-var tableName = 'NEW_TABLE';
+const DynamoDB = new AWS.DynamoDB.DocumentClient();
+const tableName = 'NEW_TABLE';
 
 exports.handler = async (event) => {
-    var response = {};
-    var statuscode = 200;
-    var params = {
+    let response = {};
+    let statuscode = 200;
+    let params = {
         TableName: tableName,
         Item: {
           Key: event.Key,
