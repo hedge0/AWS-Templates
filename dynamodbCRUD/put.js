@@ -8,8 +8,8 @@ exports.handler = async (event) => {
     let params = {
         TableName: tableName,
         Item: {
-          Key: event.Key,
-          Value: event.Value
+            Key: event.Key,
+            Value: event.Value
         }
     };
 

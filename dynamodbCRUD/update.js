@@ -12,7 +12,7 @@ exports.handler = async (event) => {
         },
         UpdateExpression: 'set value = :val',
         ExpressionAttributeValues: {
-          ':val': event.Value
+            ':val': event.Value
         }
     };
 
