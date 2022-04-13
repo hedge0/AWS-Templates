@@ -5,7 +5,7 @@ const tableName = 'NEW_TABLE';
 
 exports.handler = async (event) => {
     let response;
-    let params = {
+    const params = {
         TableName: tableName,
         Item: {
             Key: event.Key,
