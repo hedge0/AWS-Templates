@@ -6,7 +6,7 @@ const tableName = 'NEW_TABLE';
 exports.handler = async (event) => {
   const response = [];
   let items;
-  let params = {
+  const params = {
     TableName: tableName
   };
 
