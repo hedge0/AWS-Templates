@@ -4,7 +4,7 @@ const DynamoDB = new AWS.DynamoDB.DocumentClient();
 const tableName = 'NEW_TABLE';
 
 exports.handler = async (event) => {
-  const response = [];
+  let response = [];
   let items;
   const params = {
     TableName: tableName
