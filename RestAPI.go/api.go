@@ -9,7 +9,7 @@ import (
 
 func handleRequests() {
 	myRouter := mux.NewRouter().StrictSlash(true)
-	log.Fatal(http.ListenAndServe(":10000", myRouter))
+	log.Fatal(http.ListenAndServe(":8000", myRouter))
 }
 
 func main() {

@@ -1,16 +1,10 @@
-FROM python:3
-
-# set a directory for the app
-WORKDIR /usr/src/app
-
-# copy all the files to the container
-COPY . .
-
-# install dependencies
-RUN pip install --no-cache-dir -r requirements.txt
-
-# tell the port number the container should expose
-EXPOSE 5000
-
-# run the command
-CMD ["python", "./app.py"]
+# syntax=docker/dockerfile:1
+FROM golang:1.18.1-alpine
+WORKDIR /app
+COPY go.mod ./
+COPY go.sum ./
+RUN go mod download
+COPY *.go ./
+RUN go build -o /server
+EXPOSE 8080
+CMD [ "/server" ]
